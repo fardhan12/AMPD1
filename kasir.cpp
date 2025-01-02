@@ -22,10 +22,37 @@ int main() {
 	cin>>jumlahTotalBarang;
 	cout<<endl;
 	
-	if (jumlahTotalBarang <=0 || jumlahTotalBarang > MAX_BARANG) {
-		cout<<"Jumlah barang tidak valid!"<<endl;
+	if(jumlahTotalBarang <=0 || jumlahTotalBarang>MAX_BARANG){
+		cout<<"Jumlah barang tidak valid"<<endl;
 		
 		return 0;
 	}
+	
+	for(int i = 0; i<jumlahTotalBarang; i++){
+		cout<<"Barang ke -" i+1 <<endl;
+		cout<<"Nama Barang : ";
+		getline(cin>ws,namaBarang[i]);
+		cout<<"Harga Satuan :";
+		cin>>hargaBarang[i];
+		cout<<"Jumlah "<<namaBarang[i]<<"yang dibeli";
+		cin>>jumlahBarang[i];
+		cout<<endl;
+	}
+	cout<<endl;
+	
+	cout<<"---------------------------"<<end;
+	
+	cout>>"No barang jumlah Harga Satuan Sub Total"<<endl;
+	
+	for(int i = 0; i<jumlahTotalBarang; i++){
+		cout<<setw(1)<<i+1<<" ";
+		cout<<left<<setw(12)<<namaBarang[i];
+		cout<<setw(18)<<hargaBarang[i];
+		cout<<setw(15)<<jumlahBarang[i] * hargaBarang[i];
+		cout<<endl;
+		totalHarga = totalHarga + (jumlahBarang[i] * hargaBarang[i]);			
+	}
+	
+	cout<<"-------------------------------"<<endl;
 		
 }
