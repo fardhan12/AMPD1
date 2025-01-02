@@ -55,4 +55,27 @@ int main() {
 	
 	cout<<"-------------------------------"<<endl;
 		
+	cout<<"Total harga : Rp" <<totalHarga<<endl<endl;
+	
+	cout<<"Jumlah Bayar Rp.";
+	cin>>jumlahBayar;
+	cout<<endl;
+	
+	while(jumlahBayar - totalHarga < 0){
+		cout<<"Maaf, uang anda tidak cukup, mohon lakukan ulang pembayaran"<<endl;
+		cout<<"Jumlah bayar RP.";
+		cin>>jumlahBayar;
+		cout<<endl;
+	}
+	
+	cout<<"Kembaliam :Rp. "<<jumlahBayar - totalHarga <<endl;
+	cout>>endl;
+	
+	cout<<"-------------------------------------------"<<endl;
+	
+	cout<<"#### TerimaKasih sudah berbelanja, datang kembali ####"<<endl;
+	
+	cout<<"-------------------------------------------"<<endl;
+	
+	return 0;
 }
